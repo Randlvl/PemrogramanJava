@@ -1,0 +1,27 @@
+
+
+import java.util.Scanner;
+
+public class VolumeBalok {
+
+    public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
+
+        System.out.println("Masukan Panjang");
+        double bil1 = keyboard.nextInt();
+        System.out.println("Masukan Lebar");
+        double bil2 = keyboard.nextInt();
+
+        System.out.println("Masukan Tinggi");
+        double bil3 = keyboard.nextInt();
+
+
+        double kali = bil1 * bil2 * bil3;
+
+        System.out.println("Volume Balok = "      +  kali+ " Cm Kubik" );
+
+
+
+    }
+
+}
