@@ -1,0 +1,175 @@
+
+import java.util.Scanner;
+
+public class ifBersarangTugas2 {
+
+
+    public static final String green = "\u001b[92m";
+    public static final String cyan = "\u001b[96m";
+    public static final String norm = "\u001b[0m";
+    public static final String black = "\u001b[90m";
+    public static final String yellow = "\u001b[93m";
+    public static final String red = "\u001b[91m";
+    public static final String purple = "\u001b[95m";
+
+    public static final String blue = "\u001b[94m";
+    public static final String bgwhite = "\u001b[47m";
+    public static final String bgred = "\u001b[71m";
+    public static final String bgcyan = "\u001b[106m";
+
+    public static void main(String[] args) {
+
+
+        int quiz, tugas, uts, uas, hasil1;
+        int pakai = 0;
+        String welcome, nama, kelas, hasil, hasil2;
+        boolean confirm = true;
+        Scanner scan = new Scanner(System.in);
+
+        while ( confirm ) {
+
+            scan.nextLine();
+
+            System.out.println(">>>Created by ༺ Ran ༻, 15  April 2019<<<"+norm);
+
+
+
+
+            scan.nextLine();
+
+            System.out.println(blue+ "Selamat Datang di Aplikasi Rapor Siswa"+norm);
+
+
+            System.out.print("Masukan Nama Siswa        : ");
+
+            nama = scan.nextLine();
+
+            System.out.print("Masukan Kelas             : ");
+            kelas = scan.nextLine();
+
+            System.out.print("Masukan Nilai Quiz        : ");
+            quiz = scan.nextInt();
+
+            System.out.print("Masukan Nilai Tugas       : ");
+            tugas = scan.nextInt();
+
+            System.out.print("Masukan Nilai UTS         : ");
+            uts = scan.nextInt();
+
+            System.out.print("Masukan Nilai UAS         : ");
+            uas = scan.nextInt();
+
+
+            hasil1 = (((quiz * 10) / 100) + ((tugas * 20) / 100) + ((uts * 30) / 100) + ((uas * 40) / 100));
+            hasil = scan.nextLine();
+//Boolean untuk lanjut atau finish dalam pembuatan laporan rapor siswa
+            System.out.println("Selesaikan Laporan?(y/n):");
+            hasil2 = scan.nextLine();
+
+
+
+            scan.nextLine();
+
+            if (hasil2.equalsIgnoreCase("n")) {
+                if (hasil1 >= 90) {
+                    hasil = ("A" + yellow );
+                } else if (hasil1 >= 80) {
+
+                    hasil = ("B+"+ black);
+                } else if (hasil1 >= 70) {
+
+                    hasil = ("B" + black);
+                } else if (hasil1 >= 60) {
+
+                    hasil = ("C+" + black );
+                } else if (hasil1 >= 50) {
+
+                    hasil = ("C" + red);
+                } else if (hasil1 >= 40) {
+
+                    hasil = ("D" + red);
+                } else if (hasil1 >= 30) {
+
+                    hasil = ("E" + red);
+                }
+                else if (hasil1 >= 0){
+
+                    hasil = ("F" + red);
+                }
+
+                else {
+                    return;
+                }
+
+
+            } else if (hasil2.equalsIgnoreCase("y")) {
+
+
+                if (hasil1 >= 90) {
+                    hasil = ("A" + yellow );
+                } else if (hasil1 >= 80) {
+
+                    hasil = ("B+"+ black);
+                } else if (hasil1 >= 70) {
+
+                    hasil = ("B" + black);
+                } else if (hasil1 >= 60) {
+
+                    hasil = ("C+" + black );
+                } else if (hasil1 >= 50) {
+
+                    hasil = ("C" + red);
+                } else if (hasil1 >= 40) {
+
+                    hasil = ("D" + red);
+                } else if (hasil1 >= 30) {
+
+                    hasil = ("E" + red);
+                }
+                else if (hasil1 >= 0){
+
+                    hasil = ("F" + red);
+                }
+
+
+
+                confirm = false;
+            }
+
+            pakai++;
+
+
+            System.out.println(bgwhite+yellow+"   HASIL RAPOT    "+norm);
+
+            System.out.println("NAMA  SISWA     : " + nama);
+            System.out.println("SISWA KELAS     : " + kelas);
+            System.out.println("NILAI TUGAS     : " + tugas);
+            System.out.println("NILAI QUIZ      : " + quiz);
+            System.out.println("NILAI UTS       : " + uts);
+            System.out.println("NILAI UAS       : " + uas);
+
+
+            System.out.println("Hasil           : "+"(" + quiz + " /10%) + "
+                                                +"(" + tugas + " /20%) + "
+                                                +"(" + uts + " /30%) + "
+                                                +"(" + uas + " /40%)");
+
+
+            System.out.println(red+"NILAI GRADE     : "+norm + hasil +"("+ hasil1 +")" +norm);
+
+            scan.nextLine();
+            System.out.println(norm+"Pemakaian App ini : " +purple+ pakai +norm+ " kali");
+
+            System.out.println();
+
+
+
+
+        }
+
+
+    }
+}
+
+
+
