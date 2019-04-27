@@ -1,0 +1,63 @@
+public class Hp{
+    private static final String green = "\u001b[92m";
+    private static final String norm = "\u001b[0m";
+    public static void main(String[] args) {
+
+        spek h1=new spek("Samsung Galaxy Note","Exynos",0.1,512,8,6.4);
+        spek h2=new spek("Oppo Find X","Qualcomm",0.2,256,8,6.42);
+        spek h3=new spek("Xiaomi Mi A2","Octa-core",0.3,128,6,5.99);
+        spek h4=new spek("Asus ROG","Qualcomm",0.4,128,8,6.0);
+        spek h5=new spek("Lenovo Z5 Pro","Qualcomm",0.5,128,6,6.39);
+        System.out.println();
+        System.out.println(green+"Spesifikasi HP"+norm);
+
+        h1.showspek();
+        h2.showspek();
+        h3.showspek();
+        h4.showspek();
+        h5.showspek();
+
+    }
+
+
+
+    static class spek{
+int storage,ram;
+        double id, layar;
+String merek,processor;
+
+  private spek(String m, String p, double i, int s, int r, double l){
+      this.id=i;
+      this.merek=m;
+      this.processor=p;
+      this.storage=s;
+      this.ram=r;
+      this.layar=l;
+
+  }
+
+
+        void showspek(){
+
+      System.out.println();
+      System.out.println(id);
+      System.out.println("Merek     :"+merek);
+      System.out.println("Processor :"+processor);
+      System.out.println("Storage   :"+storage+" GB");
+      System.out.println("Ram       :"+ram+" GB RAM");
+      System.out.println("Layar     :"+layar+" inches");
+
+
+
+
+
+  }
+
+
+
+    }
+
+
+
+
+    }
